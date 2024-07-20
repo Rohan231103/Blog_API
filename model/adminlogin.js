@@ -1,13 +1,12 @@
-var mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-//Admin Login
-var adminschema = new mongoose.Schema({
-    email:{
-        type:String
-    },
-    password:{
-        type:String
-    }
+const adminschema = new mongoose.Schema({
+  email: {
+    type: String,
+  },
+  password: {
+    type: String,
+  },
 });
 
-module.exports = mongoose.model("admin",adminschema);
+module.exports = mongoose.model("admin", adminschema);

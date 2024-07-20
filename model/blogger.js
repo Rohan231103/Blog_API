@@ -1,15 +1,15 @@
-var mongoose=require('mongoose');
+const mongoose = require("mongoose");
 
-var bloggerschema=new mongoose.Schema({
-    name:{
-        type:String
-    },
-    email:{
-        type:String
-    },
-    password:{
-        type:String
-    }
-})
+const bloggerschema = new mongoose.Schema({
+  name: {
+    type: String,
+  },
+  email: {
+    type: String,
+  },
+  password: {
+    type: String,
+  },
+});
 
-module.exports=mongoose.model("blogger",bloggerschema)
+module.exports = mongoose.model("blogger", bloggerschema);

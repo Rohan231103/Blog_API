@@ -1,31 +1,30 @@
-var express = require('express');
-var router = express.Router();
-var admin = require('../controller/admincontroller');
+const express = require("express");
+const router = express.Router();
+const admin = require("../controller/admincontroller");
 
 // Admin Add
 // router.post('/add', admin.insert);
 
 // Admin Login
-router.post('/adminlogin',admin.adminlogin);
-router.get('/adminlogout',admin.adminlogout);  // Admin Logout
+router.post("/adminlogin", admin.adminlogin);
+router.get("/adminlogout", admin.adminlogout);
 
 // Blog
-router.post('/addblog',admin.addblog);    // Add Blog
-router.get('/viewblog',admin.viewblog)    // View Blog
-router.post('/editblog/:id',admin.editblog);  // Update Blog
-router.get('/deleteblog/:id',admin.deleteblog);  // Delete Blog
+router.post("/addblog", admin.addblog);
+router.get("/viewblog", admin.viewblog);
+router.post("/editblog/:id", admin.editblog);
+router.get("/deleteblog/:id", admin.deleteblog);
 
 // Category
-router.post('/addcat',admin.cat)      //Add Category
-router.get('/viewcat',admin.viewcat)      //view Category
-router.get('/deletecat/:id',admin.deletecat)      //Delete Category
-router.post('/editcat/:id',admin.editcat)      //Add Category
+router.post("/addcat", admin.cat);
+router.get("/viewcat", admin.viewcat);
+router.get("/deletecat/:id", admin.deletecat);
+router.post("/editcat/:id", admin.editcat);
 
 // Blogger
-router.post('/addblogger',admin.addblogger);    //Add Blogger
-router.get('/viewblogger',admin.viewblogger);      //view Blogger
-router.post('/editblogger/:id',admin.editblogger);    //Edit Blogger
-router.get('/deleteblogger/:id',admin.deleteblogger);    //Delete Blogger
-
+router.post("/addblogger", admin.addblogger);
+router.get("/viewblogger", admin.viewblogger);
+router.post("/editblogger/:id", admin.editblogger);
+router.get("/deleteblogger/:id", admin.deleteblogger);
 
 module.exports = router;
